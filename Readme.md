@@ -3,11 +3,11 @@
 ````markdown
 # 🛠️ Artensian – Connect with Skilled Professionals
 
-Artensian is a web platform designed to connect users with verified artisans and professionals \
+Artensian is a web platform designed to connect users with verified artisans and professionals <br>
 
-<br>across various fields. Whether you’re looking for a plumber, electrician, designer, 
+across various fields. Whether you’re looking for a plumber, electrician, designer, <br>
 
-carpenter, or tech expert, Artensian helps you discover and hire the right professional for 
+carpenter, or tech expert, Artensian helps you discover and hire the right professional for <br>
 
 your needs.
 
@@ -95,11 +95,10 @@ This project is licensed under the **MIT License** – feel free to use and adap
 
 ## 💡 Vision
 
-Artensian aims to empower local artisans by giving them a digital presence while helping users easily find reliable professionals. It’s about bridging trust, skill, and opportunity in one platform.
+Artensian aims to empower local artisans by giving them a <br> digital presence while helping users easily find reliable professionals. <br> It’s about bridging trust, skill, and opportunity in one platform.
 
 ```
 
 ---
 
-👉 Do you want me to also **write a shorter version** of the README (like a product pitch style) for GitHub front page, or keep it as a full developer-focused one?
 ```
