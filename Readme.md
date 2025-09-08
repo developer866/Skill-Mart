@@ -1,6 +1,6 @@
 
 
-````
+````markdown
 # 🛠️ Artensian – Connect with Skilled Professionals
 
 Artensian is a web platform designed to connect users with verified artisans and professionals across various fields. Whether you’re looking for a plumber, electrician, designer, carpenter, or tech expert, Artensian helps you discover and hire the right professional for your needs.
