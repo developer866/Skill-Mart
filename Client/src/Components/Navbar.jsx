@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="flex justify-between items-center py-4 px-[10%] bg-[#F7F7F7] navbar">
@@ -12,10 +12,10 @@ function Navbar() {
       </ul>
       <div>
         <button className="bg-[#C9FF4D] text-black md:px-4 md:py-2 mx-2 rounded-full">
-          register
+          <Link to="/register">Register</Link>
         </button>
         <button className="bg-[#C9FF4D] text-black md:px-4 md:py-2  rounded-full">
-          login
+          <Link to="/login">Login</Link>
         </button>
       </div>
     </nav>

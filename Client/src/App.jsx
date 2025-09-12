@@ -2,14 +2,20 @@ import React from "react";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import HomePage from "./Pages/HomePage";
+import { Routes, Route } from "react-router-dom";
+
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 function App() {
   return (
     <main className="font-poppins">
       <Navbar />
-
       <div className="max-w-[80%] mx-auto my-4 md:px-2 border-2 border-dashed ">
-        <HomePage />
-        <HomePage />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/Login" element={<Login />} />
+        </Routes>
       </div>
 
       <Footer />
