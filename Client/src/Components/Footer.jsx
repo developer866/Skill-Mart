@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='footer h-[30vh] text-white text-3xl bold'>Footer</div>
+    <div className='footer text-white text-xl bold py-4 px-[10%]'>Footer</div>
   )
 }
 

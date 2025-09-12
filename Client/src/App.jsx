@@ -1,19 +1,19 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import HomePage from "./Pages/HomePage";
 function App() {
   return (
     <main className="font-poppins">
       <Navbar />
-      {/* container */}
-      <div className="max-w-[80%] mx-auto my-4 px-2 md:px-12 border border-dotted h-[80vh]">
+
+      <div className="max-w-[80%] mx-auto my-4 md:px-2 border-2 border-dashed ">
+        <HomePage />
+        <HomePage />
       </div>
 
-      {/* <div className="max-w-[80%] mx-auto my-4 px-2 md:px-12 border border-dotted h-[80vh]">
-      </div> */}
       <Footer />
     </main>
-
   );
 }
 
