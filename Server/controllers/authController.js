@@ -27,16 +27,31 @@ export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
+
     const user = await User.findOne({ email });
-    if (!user) return res.status(400).json({ message: "Invalid credentials" });
+    if (!user) return res.status(400).json({ message: "Invalid email" });
 
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) return res.status(400).json({ message: "Invalid credentials" });
+    if (!isMatch) return res.status(400).json({ message: "Invalid Password" });
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
 
-    res.json({ token, user: { id: user._id, name: user.name, email: user.email } });
+    if (!process.env.JWT_SECRET) {
+      throw new Error("JWT_SECRET is missing in .env");
+    }
+
+    const token = jwt.sign(
+      { id: user._id },
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" }
+    );
+
+    res.json({
+      token,
+      user: { id: user._id, name: user.name, email: user.email }
+    });
+
   } catch (error) {
-    res.status(500).json({ message: "Server error" });
+    console.error("Login error:", error);
+    res.status(500).json({ message: "Server error", error: error.message });
   }
 };
