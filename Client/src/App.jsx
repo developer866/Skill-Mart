@@ -7,7 +7,6 @@ import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Protected from "./Pages/Protected";
-import Toastify from 'toastify-js'
 
 function App() {
   return (
