@@ -10,9 +10,9 @@ import Protected from "./Pages/Protected";
 
 function App() {
   return (
-    <main className="font-poppins">
+    <main className="">
       <Navbar />
-      <div className="max-w-[80%] mx-auto my-4 md:px-2 border-2 border-dashed ">
+      <div className="md:w-[80%]  m-4 px-2 md:h-[80vh]  border-2 border-dashed">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Register" element={<Register />} />

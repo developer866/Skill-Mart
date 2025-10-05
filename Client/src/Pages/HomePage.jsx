@@ -10,7 +10,7 @@ function HomePage() {
             WELCOME TO SKILLMART
           </h1>
           <p className="bold pt-5 text-thin ">
-            where we connect the world with proefessional an with connect
+            where we connect the world with proefessional and we connect
             professionals with the world
           </p>
 
@@ -30,7 +30,9 @@ function HomePage() {
 
         <section className="md:flex justify-between md:w-[50%]">
           <div className="my-4 p-4 border rounded">Hire a professional</div>
-          <div className="my-4 p-4 border rounded">Register as a professional</div>
+          <div className="my-4 p-4 border rounded">
+            Register as a professional
+          </div>
           <div className="my-4 p-4 border rounded">24/7 actively</div>
         </section>
       </section>
