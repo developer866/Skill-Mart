@@ -10,9 +10,9 @@ import Protected from "./Pages/Protected";
 
 function App() {
   return (
-    <main className="">
-      <Navbar />
-      <div className="md:w-[80%]  m-4 px-2 md:h-[80vh]  border-2 border-dashed">
+    <main className="md:w-[90%] m-auto">
+      <Navbar  />
+      <div className="md:border-0 border-2 border-dashed">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Register" element={<Register />} />
