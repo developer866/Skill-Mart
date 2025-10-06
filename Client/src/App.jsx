@@ -6,17 +6,19 @@ import { Routes, Route } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import About from "./Pages/About";
 import Protected from "./Pages/Protected";
 
 function App() {
   return (
-    <main className="md:w-[90%] m-auto">
+    <main className="min-h-screen m-auto">
       <Navbar  />
       <div className="md:border-0 border-2 border-dashed">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/About" element={<About/>} />
 
           <Route
             path="/Dashboard"

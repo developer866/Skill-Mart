@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <main className="">
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-10">
+      <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-10 ">
         {/* Left Side: Text Content */}
         <section className="max-w-md text-center md:text-left">
           <h1 className="text-2xl md:text-4xl font-bold mb-3">

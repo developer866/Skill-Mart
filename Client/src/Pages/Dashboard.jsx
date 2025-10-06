@@ -1,29 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import Profession from "../Data/Profession";
 
 function Dashboard() {
+  const [query, setQuery] = useState("");
+  console.log(query);
   return (
-    <main className=" flex flex-col  border mx-auto items-center">
-      <h1>Welcome to skillmart</h1>
-      <p>Hire a skill.</p>
-
+    <main className="flex flex-col mx-auto items-center border-dashed d:w-[90%] min-h-[70vh] justify-center">
       <div>
+        <h1 className="text-xl md:text-xl font-bold">
+          WELCOME TO <span className="">SKILLMART</span>
+        </h1>
+      </div>
+
+      <div className="w-[90%] flex flex-col items-center">
         <input
           type="text"
           id="SearchForArtisan"
-          className="md:w-[60%] border rounded-1xl md:p-4 my-4"
+          className="w-[70%]  border rounded-xl p-4 my-4"
           placeholder="Search For Artisan"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
-        <button className="border bg-[#C9FF4D] md:p-4  rounded">Search</button>
       </div>
-
-      <section className="border">
-        <h1 className="bold">Available Artisain</h1>
-        <section className=" md:flex justify-between gap-1.5">
-          <div className="w-[100%] border">artisan 1</div>
-          <div className="w-[50%] border">artisan 1</div>
-          <div className=" w-[50%] border">artisan 1</div>
-        </section>
-      </section>
+      {/* dispaly query */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-[90%] text-center">
+        {Profession.slice(0,20).map((item, index) => (
+          
+          <p key={index}>{item}</p>
+        ))}
+      </div>
     </main>
   );
 }

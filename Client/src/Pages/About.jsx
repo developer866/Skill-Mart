@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <section className="bg-[#0a0a0a] text-white min-h-screen flex flex-col items-center justify-center px-6 py-12">
+    <section id="about" className="bg-[#0a0a0a]  text-white min-h-screen flex flex-col items-center justify-center px-6 py-12">
       {/* Title */}
       <h1 className="text-3xl md:text-5xl font-bold mb-6 text-center">
         About <span className="text-[#C9FF4D]">SkillMart</span>

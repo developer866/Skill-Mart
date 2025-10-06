@@ -13,10 +13,22 @@ function Navbar() {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex space-x-6 font-medium">
-        <li className="hover:text-[#C9FF4D] cursor-pointer transition-colors">Work</li>
-        <li className="hover:text-[#C9FF4D] cursor-pointer transition-colors">Services</li>
-        <li className="hover:text-[#C9FF4D] cursor-pointer transition-colors">About</li>
-        <li className="hover:text-[#C9FF4D] cursor-pointer transition-colors">Learn</li>
+        <li className="hover:text-[#C9FF4D] cursor-pointer transition-colors">
+          Work
+        </li>
+        <li className="hover:text-[#C9FF4D] cursor-pointer transition-colors">
+          Services
+        </li>
+        <li
+          className="hover:text-[#C9FF4D] cursor-pointer transition-colors"
+          id="about"
+          href="#about"
+        >
+          <a href="#about">About</a>
+        </li>
+        <li className="hover:text-[#C9FF4D] cursor-pointer transition-colors">
+          Learn
+        </li>
       </ul>
 
       {/* Buttons (Desktop) */}
@@ -75,10 +87,16 @@ function Navbar() {
             <li className="hover:text-[#C9FF4D] cursor-pointer">Learn</li>
           </ul>
           <div className="w-[70%] m-auto flex flex-col gap-3 mt-4">
-            <Link className="bg-[#C9FF4D] text-black px-3 py-2 rounded" to="/register">
+            <Link
+              className="bg-[#C9FF4D] text-black px-3 py-2 rounded"
+              to="/register"
+            >
               Register
             </Link>
-            <Link className="bg-[#C9FF4D] text-black px-3 py-2 rounded" to="/login">
+            <Link
+              className="bg-[#C9FF4D] text-black px-3 py-2 rounded"
+              to="/login"
+            >
               Login
             </Link>
           </div>
