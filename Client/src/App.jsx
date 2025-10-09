@@ -8,6 +8,7 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import About from "./Pages/About";
 import Protected from "./Pages/Protected";
+import Result from "./Pages/Result";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/About" element={<About/>} />
+          <Route path="/Result" element={<Result/>} />
 
           <Route
             path="/Dashboard"

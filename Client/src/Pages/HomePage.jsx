@@ -7,7 +7,7 @@ function HomePage() {
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-10 ">
         {/* Left Side: Text Content */}
-        <section className="max-w-md text-center md:text-left">
+        <section className="max-w-[80%] m-auto text-center md:text-left">
           <h1 className="text-2xl md:text-4xl font-bold mb-3">
             WELCOME TO <span className="text-[#C9FF4D]">SKILLMART</span>
           </h1>
@@ -22,7 +22,7 @@ function HomePage() {
         </section>
 
         {/* Right Side: Image */}
-        <section className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+        <section className="mt-8 md:mt-0  m-auto flex justify-center">
           <img
             src="/images/artisan.jpg"
             alt="Artisan at work"

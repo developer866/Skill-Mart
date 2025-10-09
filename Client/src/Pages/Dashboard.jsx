@@ -1,14 +1,28 @@
 import React, { useState } from "react";
 import Profession from "../Data/Profession";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
   const [query, setQuery] = useState("");
+
+  const navigate = useNavigate();
   console.log(query);
+
+  const filteredArtisans = Profession.filter((artisan) =>
+    artisan.toLowerCase().includes(query.toLowerCase())
+  );
+
+  const handlekeydown = (e) => {
+    if (e.key === "Enter") {
+      navigate(`/result?search=${query}`);
+    }
+  };
+
   return (
-    <main className="flex flex-col mx-auto items-center border-dashed d:w-[90%] min-h-[70vh] justify-center">
+    <main className="flex flex-col mx-auto items-center border-dashed d:w-[90%] min-h-[70vh] justify-center mt-5">
       <div>
         <h1 className="text-xl md:text-xl font-bold">
-          WELCOME TO <span className="">SKILLMART</span>
+          <span className=""></span>
         </h1>
       </div>
 
@@ -16,17 +30,32 @@ function Dashboard() {
         <input
           type="text"
           id="SearchForArtisan"
-          className="w-[70%]  border rounded-xl p-4 my-4"
+          className="w-[70%]  border rounded-xl md:p-4 p-2 my-4"
           placeholder="Search For Artisan"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={handlekeydown}
         />
       </div>
-      {/* dispaly query */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-[90%] text-center">
-        {Profession.slice(0,20).map((item, index) => (
-          
-          <p key={index}>{item}</p>
+
+      <div className="mt-4">
+        {query.length > 0 ? (
+          <h1 className="text-xl bold">
+            Showing {filteredArtisans.length} results for "{query}"
+          </h1>
+        ) : (
+          <span>Showing all artisans</span>
+        )}
+      </div>
+
+      <div>
+        <h1 className="text-xl bold">{}</h1>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-6 sm:grid-cols-3 gap-4 w-[90%] text-center mt-4">
+        {filteredArtisans.slice(0, 10).map((item, index) => (
+          <p className=" border-gray-400 border-2 p-2" key={index}>
+            {item}
+          </p>
         ))}
       </div>
     </main>
