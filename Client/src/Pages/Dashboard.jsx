@@ -17,6 +17,11 @@ function Dashboard() {
       navigate(`/result?search=${query}`);
     }
   };
+  const handlClick = (item) => {
+    // e.preventDefault();
+    navigate(`/result?search=${item}`);
+    console.log(item);
+  }
 
   return (
     <main className="flex flex-col mx-auto items-center border-dashed d:w-[90%] min-h-[70vh] justify-center mt-5">
@@ -48,12 +53,9 @@ function Dashboard() {
         )}
       </div>
 
-      <div>
-        <h1 className="text-xl bold">{}</h1>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-6 sm:grid-cols-3 gap-4 w-[90%] text-center mt-4">
+      <div className="grid grid-cols-2 md:grid-cols-6 sm:grid-cols-3 gap-3 w-[90%] text-center mt-4">
         {filteredArtisans.slice(0, 10).map((item, index) => (
-          <p className=" border-gray-400 border-2 p-2" key={index}>
+          <p className=" border-gray-400 border-2 p-2" onClick={()=>handlClick(item)}  key={index}>
             {item}
           </p>
         ))}
