@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import Artisan from "../Data/Aritsan";
 
 function Result() {
@@ -21,11 +21,18 @@ function Result() {
         <span className="text-blue-600">"{searchQuery}"</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-3">
         {filteredArtisans.length > 0 ? (
           filteredArtisans.map((artisan, index) => (
-            <div key={index} className="border p-2 md:m-2 rounded-lg shadow-sm">
-              <div className="flex justify-center gap-2 items-center mt-2">
+            <div
+              key={index}
+              className="border-gray-500 p-3 md:m-2 rounded-lg shadow-sm"
+              onClick={() => {
+                console.log(artisan.name);
+                Navigate(`/artisan/${artisan.id}`);
+              }}
+            >
+              <div className="flex justify-between items-center w-[70%] m-auto ">
                 <div>
                   {artisan.svg_icon && (
                     <div
