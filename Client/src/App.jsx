@@ -9,6 +9,7 @@ import Register from "./Pages/Register";
 import About from "./Pages/About";
 import Protected from "./Pages/Protected";
 import Result from "./Pages/Result";
+import ArtisanPage from "./Pages/ArtisanPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/About" element={<About/>} />
           <Route path="/Result" element={<Result/>} />
+          <Route path="/ArtisanPAge" element={<ArtisanPage />} />
 
           <Route
             path="/Dashboard"
