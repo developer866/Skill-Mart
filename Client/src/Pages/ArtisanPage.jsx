@@ -15,7 +15,8 @@ function ArtisanPage() {
     );
   }
   const handleClick =()=>{
-    navigete('/BookingPage');
+    navigete(`/BookingPage`, {state:{artisan}});
+
   }
 
   return (
@@ -88,7 +89,7 @@ function ArtisanPage() {
 
           {/* Call to Action */}
           <div className="mt-8 flex justify-center">
-            <button className="text-[#C9FF4D] px-6 py-3 text-sm  rounded-lg shadow-md transition-all duration-200" onClick={()=>{handleClick()}}>
+            <button className="text-[#C9FF4D] px-6 py-3 text-sm  rounded-lg shadow-md transition-all duration-200" onClick={handleClick}>
               Book {artisan.name.split(" ")[0]} Now
             </button>
           </div>

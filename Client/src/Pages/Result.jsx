@@ -18,6 +18,7 @@ function Result() {
   const handleClick = (artisan) => {
     console.log("hello world");
     navigate(`/ArtisanPage?artisan=${artisan.id}`,{state: { artisan }});
+
   };
 
   
