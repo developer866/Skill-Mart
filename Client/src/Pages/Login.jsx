@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 
@@ -126,7 +126,9 @@ function Login() {
             href="#"
             className="text-blue-600 hover:underline dark:text-blue-400"
           >
+            <Link to='/Register' >
             Create one
+            </Link>
           </a>
         </p>
       </div>

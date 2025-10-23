@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Toastify from "toastify-js";
-import "toastify-js/src/toastify.css"; // make sure the styles are imported
+import "toastify-js/src/toastify.css";
 
-// 🔹 Helper function for showing toast
 const showToast = (text, type = "success") => {
   Toastify({
     text,
@@ -14,8 +14,8 @@ const showToast = (text, type = "success") => {
     style: {
       background:
         type === "success"
-          ? "linear-gradient(to right, #00b09b, #96c93d)" // green gradient
-          : "linear-gradient(to right, #ff5f6d, #ffc371)", // red/orange gradient
+          ? "linear-gradient(to right, #00b09b, #96c93d)"
+          : "linear-gradient(to right, #ff5f6d, #ffc371)",
     },
   }).showToast();
 };
@@ -34,11 +34,9 @@ function Register() {
         form
       );
 
-      // ✅ Success toast
       showToast(res.data.message || "Registered successfully!", "success");
-      setForm({ name: "", email: "", password: "" }); // clear form after success
+      setForm({ name: "", email: "", password: "" });
     } catch (err) {
-      // ❌ Error toast
       showToast(err.response?.data?.message || "Something went wrong", "error");
     }
   };

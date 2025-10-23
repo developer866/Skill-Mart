@@ -15,7 +15,6 @@ function Footer() {
           </p>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-gray-300">
@@ -42,7 +41,7 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Contact Section */}
+       
         <div>
           <h3 className="text-lg font-semibold mb-3">Get in Touch</h3>
           <p className="text-gray-300 text-sm">
@@ -55,7 +54,7 @@ function Footer() {
         </div>
       </div>
 
-      {/* Divider */}
+
       <div className="border-t border-gray-700 mt-10 pt-4 text-center text-gray-500 text-sm">
         © {new Date().getFullYear()} SkillMart. All rights reserved.
       </div>

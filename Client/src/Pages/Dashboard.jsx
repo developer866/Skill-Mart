@@ -35,7 +35,7 @@ function Dashboard() {
         <input
           type="text"
           id="SearchForArtisan"
-          className="w-[70%] border-gray-500 rounded-xl md:p-4 p-2 my-4"
+          className="w-[70%] border rounded-xl md:p-4 p-2 my-4"
           placeholder="Search For Artisan"
           value={query}
           onChange={(e) => setQuery(e.target.value)}

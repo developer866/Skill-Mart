@@ -10,6 +10,7 @@ import About from "./Pages/About";
 import Protected from "./Pages/Protected";
 import Result from "./Pages/Result";
 import ArtisanPage from "./Pages/ArtisanPage";
+import BoookingPage from "./Pages/BookingPage";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
           <Route path="/About" element={<About/>} />
           <Route path="/Result" element={<Result/>} />
           <Route path="/ArtisanPAge" element={<ArtisanPage />} />
-
+          <Route path="/" element={<BoookingPage />} />
+      
           <Route
             path="/Dashboard"
             element={
