@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] text-white py-10 px-[10%]">
-      <div className="grid md:grid-cols-3 gap-8">
+    <footer className=" bg-[#0a0a0a] text-white py-10 ">
+      <div className="flex justify-between gap-8 max-w-[90%] md:m-auto">
         {/* Brand Section */}
-        <div>
-          <h2 className="text-2xl font-bold mb-3 text-[#C9FF4D]">SkillMart</h2>
+        <div className="md:w-1/3">
+          <h1 className="text-2xl font-bold mb-3 text-[#C9FF4D]">SkillMart</h1>
           <p className="text-gray-400 text-sm leading-relaxed">
             Connecting the world with professionals, and professionals with the
             world. Empowering talent, building trust, and making opportunities
@@ -16,7 +16,7 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
+          <h3 className=" font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-gray-300">
             <li>
               <Link to="/" className="hover:text-[#C9FF4D] transition-colors">
@@ -35,7 +35,7 @@ function Footer() {
             </li>
             <li>
               <Link to="/contact" className="hover:text-[#C9FF4D] transition-colors">
-                Contact
+                Contact us
               </Link>
             </li>
           </ul>
@@ -43,7 +43,7 @@ function Footer() {
 
        
         <div>
-          <h3 className="text-lg font-semibold mb-3">Get in Touch</h3>
+          <h3 className=" font-semibold mb-3">Get in Touch</h3>
           <p className="text-gray-300 text-sm">
             📍 Lagos, Nigeria  
             <br />

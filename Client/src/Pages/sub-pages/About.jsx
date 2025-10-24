@@ -9,7 +9,7 @@ function About() {
       </h1>
 
       {/* Tagline */}
-      <p className="text-lg text-gray-300 max-w-2xl text-center leading-relaxed mb-10">
+      <p className="text-gray-300  text-center leading-relaxed mb-10">
         SkillMart is a platform that bridges the gap between{" "}
         <span className="text-[#C9FF4D]">skilled professionals</span> and
         clients who need their services. Our mission is to create opportunities,
