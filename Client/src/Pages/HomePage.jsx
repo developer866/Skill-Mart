@@ -1,55 +1,32 @@
 import React from "react";
 
-// import About from "./sub-pages/About";
-
 function HomePage() {
   return (
-    <main className="md:w-[90%] md:max-h-12/12 h-screen m-auto">
-      {/* Hero Section */}
-      {/* 
-      <section className="flex ">
-   
-        <section className=" m-auto text-center w-[50%] border">
-          <h1 className="text-3xl font-bold mb-3">
+    <main className="w-full min-h-screen flex items-center justify-center">
+      <section className="w-full flex flex-col md:flex-row items-center justify-center gap-8">
+        {/* Text (centered) */}
+        <div className="flex flex-col items-center text-center md:w-1/2">
+          <h1 className="text-3xl md:text-4xl font-bold">
             WELCOME TO <span className="text-[#C9FF4D]">SKILLMART</span>
           </h1>
-          <p className="text-2xl text-gray-700 leading-relaxed">
-            Where we connect the world with professionals — and connect
-            professionals with the world. 
-          </p>
-
-          <button className="text-xl bg-[#C9FF4D] text-black px-6 py-2 rounded-full font-medium mt-6 hover:bg-lime-400 transition-all duration-200">
-            Hire a Professional
-          </button>
-        </section>
-
-        
-        <section className="">
-          <img
-            src="/images/artisan.jpg"
-            alt="Artisan at work"
-            className="rounded-2xl shadow-lg w-full max-w-sm object-cover"
-          />
-        </section>
-      </section> */}
-
-      <section className="flex flex-col md:flex-row justify-between gap-8 md:min-h-[70vh] p-4 items-center ">
-        <div className="md:w-1/2">
-          <h1 className="text-3xl font-bold mb-3">
-            WELCOME TO <span className="text-[#C9FF4D]">SKILLMART</span>
-          </h1>
-          <p className="md:text-2xl  leading-relaxed">
+          <p className="mt-3 text-base md:text-lg max-w-lg">
             Where we connect the world with professionals — and connect
             professionals with the world.
           </p>
-          <button className="md:text-xl bg-[#C9FF4D] text-black px-6 py-4 rounded-xl font-medium mt-6 hover:bg-lime-400 transition-all duration-200">
+          <button className="mt-6 bg-[#C9FF4D] text-black px-6 py-2 rounded-xl font-medium hover:bg-lime-400">
             Hire a Professional
           </button>
         </div>
 
-        
+        {/* Image (moderate size) */}
+        <div className="flex justify-center md:w-1/2">
+          <img
+            src="/images/artisan.jpg"
+            alt="Artisan at work"
+            className="w-44 md:w-72 lg:w-80 rounded-2xl object-cover"
+          />
+        </div>
       </section>
-      {/* <About /> */}
     </main>
   );
 }
